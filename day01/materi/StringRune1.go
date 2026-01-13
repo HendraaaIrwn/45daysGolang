@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func countVowels(s string) (int, int) {
 	vowelCount := 0
@@ -65,4 +67,42 @@ func main() {
 	println("Vowels:", vowels2)
 	println("Consonants:", consonants2)
 	println("Consonant String:", consonantString2)
+
+	username := "gopher"
+
+	for _ , char := range username {
+		fmt.Print(char, " \n")
+	}
+
+	for i , char := range username {
+		// fmt.Printf("index: %d, char: %v\n", i, string(char))
+		fmt.Printf("index: %d, char: %c\n", i, char)
+	}
+
+	runeUsername := []rune(username)
+	for i := 0; i < len(runeUsername); i++ {
+		fmt.Printf("index: %d, char: %c\n", i, runeUsername[i])
+	}
+
+	var (
+		tab = '\t'
+		newLine = '\n'
+		backslash = '\\'
+		singleQuote = '\''
+		doubleQuote = '"'
+		hagul = '한'
+		arabic = 'م'
+		hexadecimal = '\x48'
+		unicodeChar = '\u0048'
+	)
+
+	println("tab :", tab)
+	println("newLine :", newLine)
+	println("backslash :", backslash)
+	println("singleQuote :", singleQuote)
+	println("doubleQuote :", doubleQuote)
+	println("hagul :", hagul)
+	println("arabic :", arabic)
+	println("hexadecimal :", hexadecimal)
+	println("unicodeChar :", unicodeChar)
 }
